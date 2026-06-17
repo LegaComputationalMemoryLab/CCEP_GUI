@@ -1,0 +1,16 @@
+name: ccep-analyzer
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - matplotlib>=3.7
+  - mne>=1.5
+  - numpy>=1.24
+  - pandas>=1.5
+  - plotly>=5.15
+  - scipy>=1.10
+  - tk
+  - pytest>=7.0
+  - pip
+  - pip:
+      - -e .
