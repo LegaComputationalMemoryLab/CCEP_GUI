@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ieeg-ccep-analyzer"
+version = "0.1.0"
+description = "Python GUI for presurgical cortico-cortical evoked potential analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  {name = "Tyrell Pruitt"},
+  {name = "Bradley Lega"}
+]
+license = {text = "License pending institutional approval"}
+keywords = ["CCEP", "sEEG", "epilepsy", "clinical neurophysiology", "MNE", "Python"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Healthcare Industry",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Medical Science Apps."
+]
+dependencies = [
+  "matplotlib>=3.7",
+  "mne>=1.5",
+  "numpy>=1.24",
+  "pandas>=1.5",
+  "plotly>=5.15",
+  "scipy>=1.10"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+ieeg-ccep-analyzer = "ieeg_ccep_analyzer.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
